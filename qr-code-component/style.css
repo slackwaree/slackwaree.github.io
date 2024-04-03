@@ -1,0 +1,30 @@
+body {
+  background-color: #d5e1ef;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+body .wrap {
+  background-color: white;
+  max-width: 290px;
+  margin: 180px auto;
+  border-radius: 20px;
+  padding: 16px;
+}
+body .wrap img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+body .wrap .information {
+  padding: 0 5px;
+}
+body p {
+  color: hsl(220, 15%, 55%);
+  font-weight: 400;
+}
+body h2 {
+  color: hsl(218, 44%, 22%);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+/*# sourceMappingURL=style.css.map */
