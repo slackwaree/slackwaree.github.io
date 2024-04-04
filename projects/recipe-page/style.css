@@ -1,0 +1,57 @@
+body {
+  background-color: #f3e6d8;
+  margin: 0; }
+  body .wrap {
+    max-width: 650px;
+    margin: 150px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 30px; }
+    body .wrap h1 {
+      color: #302d2c !important; }
+    body .wrap p {
+      font-size: 16px; }
+    body .wrap h1, body .wrap h2, body .wrap h3 {
+      font-family: "Young Serif", sans-serif;
+      color: #854632;
+      font-weight: 400; }
+    body .wrap p, body .wrap li, body .wrap td {
+      font-family: "Outfit", sans-serif;
+      color: #5f574e; }
+    body .wrap h3 {
+      font-family: Outfit,sans-serif;
+      color: #7b284f;
+      font-weight: 600; }
+    body .wrap li {
+      padding-bottom: 12px;
+      padding-left: 15px; }
+    body .wrap ::marker {
+      color: #854632;
+      font-weight: 700; }
+    body .wrap hr {
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #e4ded8; }
+    body .wrap table {
+      width: 100%; }
+    body .wrap td {
+      border-bottom: 1px solid #e4ded8;
+      padding: 12px 0;
+      color: #854632; }
+    body .wrap tr :nth-child(2) {
+      font-weight: 700; }
+    body .wrap img {
+      width: 100%;
+      border-radius: 15px; }
+  @media only screen and (max-width: 720px) {
+    body .wrap {
+      border-radius: 0;
+      margin: 0; }
+    body .attribution {
+      background: white;
+      padding: 1px 0; } }
+  body .attribution a, body .attribution p {
+    text-align: center;
+    font-family: "Outfit",sans-serif; }
+
+/*# sourceMappingURL=style.css.map */
