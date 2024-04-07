@@ -41,9 +41,9 @@ body footer .socials #insta {
   margin-top: 25px;
 }
 body footer #slackimg {
-  width: 300px;
-  margin-top: -12em;
-  margin-left: 40vw;
+  width: 300px !important;
+  margin-top: -12em !important;
+  margin-left: 40vw !important;
   position: inline !important;
 }
 body img {
