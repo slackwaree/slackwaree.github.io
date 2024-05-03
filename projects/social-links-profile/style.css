@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    text-align: center;
+    background-color: hsl(0, 0%, 8%);
+    font-family: "Inter", sans-serif;
+}
+.wrap {
+    display: grid;
+    background-color: hsl(0, 0%, 12%);
+    width: 320px;
+    height: 500px;
+    border-radius: 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    padding: 20px 10px;
+}
+
+#location {color: hsl(75, 94%, 57%);margin-top:-10px;}
+#quote {font-weight: 400;}
+h2, #quote, a {color: white;}
+
+p {margin-top:-0.5em;font-size:14px;font-weight: 700;}
+img {
+    width: 25%;
+    margin: 1em auto 0 auto;
+    border-radius: 50%;
+}
+a {
+    background-color: hsl(0, 0%, 20%);
+    margin: 0 25px 12px 25px;
+    border-radius: 8px;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+a:hover {
+    background-color: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 12%);
+    transition: background-color .5s, color .5s;
+}
