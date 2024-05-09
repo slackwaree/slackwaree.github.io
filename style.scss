@@ -2,6 +2,7 @@ body {
     background-color: #fae6ff;
     font-family: sans-serif;
     color: #3478d1;
+    margin: 0;
 
     .wrap {
         background-color: #fccbff;
@@ -11,7 +12,12 @@ body {
         border-left: solid #f8a9ff 10px;
         border-right: solid #f8a9ff 10px;
     }
-
+    main {
+        line-height: 30px;
+        ul {
+            list-style-type: square;
+        }
+    }
     footer {
         background-color: #fccbff;
         border-top: dashed #f8a9ff 10px;
@@ -29,31 +35,18 @@ body {
         .socials {
             img {
                 float: right;
-                margin: -65px 20px 80px 0;
+                margin: 140px 12px 0 0;
                 width: 50px;
-                display: inline;
+                display: block;
                 filter: opacity(60%);
             }
             img:hover {filter:opacity(40%);}
-            #insta {width: 60px;margin-top:-70px;}
+            #insta {width: 60px;margin-top:135px;}
         }
         #slackimg {
             width: 300px;
-            margin-top: -12em;
-            margin-left: 40vw;
             display:block!important;
+            margin: -12em auto;
         }
     }
-
-    img { // DONT LOOK AT HOW THIS IMAGE IS ALIGNED WITH THE LIST ITEM PLS PLS PLS P SLD
-        display: inline;
-        margin-left: 60px;
-        padding-bottom: 3px;
-        margin-top:-190px;
-        width: 40px;
-    }
-
-    ul {list-style-type: square;}
-    margin: 0;
-    
 }
