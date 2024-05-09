@@ -12,6 +12,12 @@ body .wrap {
   border-left: solid #f8a9ff 10px;
   border-right: solid #f8a9ff 10px;
 }
+body main {
+  line-height: 30px;
+}
+body main ul {
+  list-style-type: square;
+}
 body footer {
   background-color: #fccbff;
   border-top: dashed #f8a9ff 10px;
@@ -28,9 +34,9 @@ body footer #viewsource {
 }
 body footer .socials img {
   float: right;
-  margin: -65px 20px 80px 0;
+  margin: 140px 12px 0 0;
   width: 50px;
-  display: inline;
+  display: block;
   filter: opacity(60%);
 }
 body footer .socials img:hover {
@@ -38,23 +44,10 @@ body footer .socials img:hover {
 }
 body footer .socials #insta {
   width: 60px;
-  margin-top: -70px;
+  margin-top: 135px;
 }
 body footer #slackimg {
   width: 300px;
-  margin-top: -12em;
-  margin-left: 40vw;
   display: block !important;
+  margin: -12em auto;
 }
-body img {
-  display: inline;
-  margin-left: 60px;
-  padding-bottom: 3px;
-  margin-top: -190px;
-  width: 40px;
-}
-body ul {
-  list-style-type: square;
-}
-
-/*# sourceMappingURL=style.css.map */
