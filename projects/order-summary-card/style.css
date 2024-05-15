@@ -1,0 +1,79 @@
+body {
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #e0e8ff;
+  margin: 0; }
+  body .wrapper {
+    width: 375px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 12px; }
+    body .wrapper #illustration-hero {
+      width: 100%;
+      border-radius: 12px 12px 0 0; }
+    body .wrapper .content {
+      padding: 0 2.5em 1em 2.5em;
+      font-family: "Red Hat Display", sans-serif; }
+      body .wrapper .content h1, body .wrapper .content p {
+        text-align: center; }
+      body .wrapper .content h1 {
+        font-size: 26px;
+        color: #404040; }
+      body .wrapper .content p {
+        color: #737373;
+        font-weight: 500;
+        font-size: 16px; }
+      body .wrapper .content img {
+        width: 40x;
+        height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px; }
+      body .wrapper .content .subscriptionInfo {
+        display: inline-flex;
+        flex-direction: column;
+        text-align: left;
+        vertical-align: middle; }
+        body .wrapper .content .subscriptionInfo h2 {
+          margin: 0;
+          font-size: 15px;
+          color: #404040; }
+        body .wrapper .content .subscriptionInfo span {
+          color: gray;
+          font-size: 14px; }
+      body .wrapper .content a {
+        margin-left: 5em;
+        color: #1f2f56;
+        font-weight: 700;
+        font-size: 14px;
+        vertical-align: middle; }
+      body .wrapper .content a:hover {
+        color: hsl(245, 75%, 70%); }
+      body .wrapper .content button {
+        width: 100%;
+        padding: 12px 0;
+        margin: 10px 0;
+        border-radius: 8px; }
+      body .wrapper .content #proceed {
+        background-color: #3829e0;
+        box-shadow: 0 15px 10px #e0e8ff;
+        color: white;
+        border: none;
+        font-weight: 700;
+        margin-top: 2em; }
+      body .wrapper .content #proceed:hover {
+        background-color: hsl(245, 75%, 70%); }
+      body .wrapper .content #cancel {
+        border: 0;
+        background-color: transparent;
+        font-weight: 700;
+        color: #595959;}
+      body .wrapper .content #cancel:hover {
+        color: black; }
+       
+
+/*# sourceMappingURL=style.css.map */
