@@ -80,8 +80,9 @@ body {
 
             a { // 'a' tags are stored inside of a nav tag so they may be displayed as blocks, while staying clickable as inlines.
                 display: block;
+                padding: 10px;
                 color: #3478d1;
-                margin-bottom: 1em;
+                margin-bottom: 0.5em;
             }
         }
         .socials {
