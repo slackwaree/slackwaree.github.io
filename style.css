@@ -79,6 +79,7 @@ body footer nav a {
   color: #3478d1;
   border-radius: 8px;
   margin-bottom: 0.5em;
+  z-index: 1;
 }
 body footer .socials img {
   float: right;
@@ -102,6 +103,8 @@ body footer #slackimg {
   left: 50%;
   top: -160%;
   transform: translate(-50%, 0);
+  pointer-events: none;
+  z-index: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
