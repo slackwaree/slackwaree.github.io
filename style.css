@@ -79,7 +79,6 @@ body footer nav a {
   color: #3478d1;
   border-radius: 8px;
   margin-bottom: 0.5em;
-  z-index: 1;
 }
 body footer .socials img {
   float: right;
