@@ -9,7 +9,7 @@ body {
     a {
         color: #3478d1;
         &:hover {
-            color: white;
+            color: #7cb2fa;
         }
     }
     ul {
@@ -81,6 +81,7 @@ body {
             a { // 'a' tags are stored inside of a nav tag so they may be displayed as blocks, while staying clickable as inlines.
                 display: block;
                 padding: 10px;
+                background-color: white;
                 color: #3478d1;
                 border-radius: 8px;
                 margin-bottom: 0.5em;
@@ -111,6 +112,7 @@ body {
             left: 50%;
             top: -160%;
             transform: translate(-50%, 0);
+            z-index: -1;
         }
     }
 }
