@@ -1,52 +1,108 @@
+$primary: #fccbff;
+$border: #f8a9ff;
+
 body {
     background-color: #fae6ff;
     font-family: sans-serif;
     color: #3478d1;
     margin: 0;
-
-    .wrap {
-        background-color: #fccbff;
-        max-width: 1000px;
-        margin: 70px auto;
-        padding: 40px;
-        border-left: solid #f8a9ff 10px;
-        border-right: solid #f8a9ff 10px;
+    a {
+        color: #3478d1;
+        &:hover {
+            color: white;
+        }
+    }
+    ul {
+        list-style-type: square;
+    }
+    li {
+        margin-bottom: 7px;
     }
     main {
         line-height: 30px;
-        ul {
-            list-style-type: square;
+
+        .container {
+            background-color: $primary;
+            max-width: 1000px;
+            margin: 70px auto;
+            padding: 40px;
+            border-left: solid $border 10px;
+            border-right: solid $border 10px;
+            
+            .grid-container { // These styles are used for the second page, 'projects-page'
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+
+                .item {
+                    background-color: white;
+                    padding: 20px;
+                    margin: 10px;
+                    border-radius: 14px;
+                    text-align: center;
+                    height: 300px;
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                        height: 200px;
+                        border-radius: 8px;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                }
+                @media screen and (max-width: 600px) {
+                    grid-template-columns: 1fr;
+                }
+            }
         }
     }
     footer {
-        background-color: #fccbff;
-        border-top: dashed #f8a9ff 10px;
+        background-color: $primary;
+        border-top: dashed $border 10px;
         height: 120px;
         width: 100%;
         position:fixed;
+        left: 0;
         bottom:0;
 
-        #viewsource {
-            bottom:0;
-            position:fixed;
+        nav {
+            display: inline-block;
             margin:12px;
-            text-decoration: none;
+
+            a { // 'a' tags are stored inside of a nav tag so they may be displayed as blocks, while staying clickable as inlines.
+                display: block;
+                color: #3478d1;
+                margin-bottom: 1em;
+            }
         }
         .socials {
             img {
                 float: right;
-                margin: 140px 12px 0 0;
                 width: 50px;
                 display: block;
+                margin-top: 1em;
+                margin-right: 1em;
                 filter: opacity(60%);
+
+                &:hover {
+                    filter:opacity(40%);
+                }
             }
-            img:hover {filter:opacity(40%);}
-            #insta {width: 60px;margin-top:135px;}
+            #insta {
+                width: 56px;
+                margin-top: calc(1em + -3px); // when the svgs are completely different sizes <33
+            }
         }
         #slackimg {
             width: 300px;
-            display:block!important;
-            margin: -12em auto;
+            display:inline-block;
+            position: absolute;
+            left: 50%;
+            top: -160%;
+            transform: translate(-50%, 0);
         }
     }
 }
