@@ -64,8 +64,8 @@ body footer {
   left: 0;
   bottom: 0;
 }
-@media screen and (max-width: 500px) {
-  body footer .creditsList li {
+@media screen and (max-width: 600px) {
+  body footer .creditsList {
     font-size: 12px;
   }
 }
@@ -101,3 +101,5 @@ body footer #slackimg {
   top: -160%;
   transform: translate(-50%, 0);
 }
+
+/*# sourceMappingURL=style.css.map */
