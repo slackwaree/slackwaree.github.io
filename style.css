@@ -75,8 +75,9 @@ body footer nav {
 }
 body footer nav a {
   display: block;
+  padding: 10px;
   color: #3478d1;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 body footer .socials img {
   float: right;
@@ -101,3 +102,5 @@ body footer #slackimg {
   top: -160%;
   transform: translate(-50%, 0);
 }
+
+/*# sourceMappingURL=style.css.map */
