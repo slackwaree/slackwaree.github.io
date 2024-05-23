@@ -68,6 +68,12 @@ body {
         left: 0;
         bottom:0;
 
+        @media screen and (max-width: 500px) {
+            .creditsList li {
+                font-size: 12px;
+            }
+        }
+
         nav {
             display: inline-block;
             margin:12px;
@@ -76,7 +82,6 @@ body {
                 display: block;
                 color: #3478d1;
                 margin-bottom: 1em;
-                font-size: 13px;
             }
         }
         .socials {
