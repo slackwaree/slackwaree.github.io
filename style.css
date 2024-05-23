@@ -8,7 +8,7 @@ body a {
   color: #3478d1;
 }
 body a:hover {
-  color: white;
+  color: #7cb2fa;
 }
 body ul {
   list-style-type: square;
@@ -76,6 +76,7 @@ body footer nav {
 body footer nav a {
   display: block;
   padding: 10px;
+  background-color: white;
   color: #3478d1;
   border-radius: 8px;
   margin-bottom: 0.5em;
