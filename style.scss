@@ -68,8 +68,8 @@ body {
         left: 0;
         bottom:0;
 
-        @media screen and (max-width: 500px) {
-            .creditsList li {
+        @media screen and (max-width: 600px) {
+            .creditsList {
                 font-size: 12px;
             }
         }
