@@ -28,6 +28,17 @@ body {
             padding: 40px;
             border-left: solid $border 10px;
             border-right: solid $border 10px;
+
+            h1 {
+                display: inline;
+                vertical-align: middle;
+            }
+            #catgif {
+                width: 80px;
+                display: inline;
+                vertical-align: middle;
+                margin-left: 1em;
+            }
             
             .grid-container { // These styles are used for the second page, 'projects-page'
                 display: grid;
