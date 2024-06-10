@@ -39,35 +39,6 @@ body {
                 vertical-align: middle;
                 margin-left: 1em;
             }
-            
-            .grid-container { // These styles are used for the second page, 'projects-page'
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(3, 1fr);
-
-                .item {
-                    background-color: white;
-                    padding: 20px;
-                    margin: 10px;
-                    border-radius: 14px;
-                    text-align: center;
-                    height: 300px;
-
-                    img {
-                        width: 100%;
-                        object-fit: cover;
-                        height: 200px;
-                        border-radius: 8px;
-                    }
-                    a {
-                        text-decoration: none;
-                        color: inherit;
-                    }
-                }
-                @media screen and (max-width: 600px) {
-                    grid-template-columns: 1fr;
-                }
-            }
         }
     }
     footer {
