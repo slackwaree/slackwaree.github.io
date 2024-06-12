@@ -1,0 +1,54 @@
+body {
+    background-color:#D8D8FF;
+    margin: 0;
+    .container {
+        text-align: center;
+        font-family: monospace;
+
+        button {
+            transition: all 0.4s ease-in-out;
+            white-space: nowrap;
+            border-radius: 20px;
+            padding: 12px;
+            background-color:#8B8BFF;
+            border: none;
+            box-shadow: 5px 7px 10px rgba(0,0,0,0.2);
+            font-family: monospace;
+            font-size: auto;
+            display: block;
+            margin: 1em auto;
+        }
+
+        .winState, .cheaterState {
+            display: none;
+        }
+        .gameState {
+            button {
+                transform: translate(-50%, -50%);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+        }
+        .winState {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            #moveCount {
+                color: blue;
+            }
+
+            hr {
+                border: 1px solid #9898b5
+            }
+            button {
+                &:hover {
+                    transition: 0.2s ease-in-out;
+                    background-color: #6767c7;
+                }
+            }
+        }
+    }
+}
