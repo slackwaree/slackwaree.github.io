@@ -37,6 +37,21 @@ body main .container #catgif {
   vertical-align: middle;
   margin-left: 1em;
 }
+body main #slackimg {
+  width: 320px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  transform: translate(-50%, 0);
+  z-index: -1;
+}
+@media screen and (max-width: 500px) {
+  body main #slackimg {
+    width: 280px;
+    bottom: 5%;
+  }
+}
 body footer {
   background-color: #fccbff;
   border-top: dashed #f8a9ff 10px;
@@ -45,6 +60,7 @@ body footer {
   position: fixed;
   left: 0;
   bottom: 0;
+  z-index: -2;
 }
 body footer nav {
   display: inline-block;
@@ -72,19 +88,4 @@ body footer .socials img:hover {
 body footer .socials #insta {
   width: 56px;
   margin-top: calc(1em - 3px);
-}
-body footer #slackimg {
-  width: 320px;
-  display: inline-block;
-  position: absolute;
-  left: 50%;
-  margin-top: -14.8em;
-  transform: translate(-50%, 0);
-  z-index: -1;
-}
-@media screen and (max-width: 500px) {
-  body footer #slackimg {
-    width: 280px;
-    margin-top: -13em;
-  }
 }
