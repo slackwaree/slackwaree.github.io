@@ -26,6 +26,7 @@ body main .container {
   padding: 40px;
   border-left: solid #f8a9ff 10px;
   border-right: solid #f8a9ff 10px;
+  z-index: -2;
 }
 body main .container h1 {
   display: inline;
@@ -44,7 +45,7 @@ body main #slackimg {
   left: 50%;
   bottom: 4%;
   transform: translate(-50%, 0);
-  z-index: -1;
+  z-index: 0;
 }
 @media screen and (max-width: 500px) {
   body main #slackimg {
