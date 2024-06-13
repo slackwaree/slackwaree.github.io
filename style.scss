@@ -49,7 +49,7 @@ body {
         position:fixed;
         left: 0;
         bottom:0;
-        
+
         nav {
             display: inline-block;
             margin:12px;
@@ -86,9 +86,16 @@ body {
             display:inline-block;
             position: absolute;
             left: 50%;
-            top: -210%;
+            top: -195%;
             transform: translate(-50%, 0);
             z-index: -1;
+
+            @media screen and (max-width: 500px) {
+                & {
+                    width: 280px;
+                    top: -150%;
+                }
+            }
         }
     }
 }
