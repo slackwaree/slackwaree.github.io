@@ -14,10 +14,7 @@ body nav a {
   background-color: white;
   color: #3478d1;
   border-radius: 8px;
-  text-decoration: none;
-}
-body nav a:hover {
-  color: #7cb2fa;
+  margin-bottom: 0.5em;
 }
 body ul {
   list-style-type: square;
@@ -31,11 +28,10 @@ body main {
 body main .container {
   background-color: #fccbff;
   max-width: 1000px;
-  margin: 1em auto;
+  margin: 70px auto;
   padding: 40px;
   border-left: solid #f8a9ff 10px;
   border-right: solid #f8a9ff 10px;
-  z-index: -2;
 }
 body main .container h1 {
   display: inline;
@@ -47,21 +43,6 @@ body main .container #catgif {
   vertical-align: middle;
   margin-left: 1em;
 }
-body main #slackimg {
-  width: 320px;
-  display: inline-block;
-  position: fixed;
-  left: 50%;
-  bottom: 4%;
-  transform: translate(-50%, 0);
-  z-index: 0;
-}
-@media screen and (max-width: 500px) {
-  body main #slackimg {
-    width: 240px;
-    bottom: 5%;
-  }
-}
 body footer {
   background-color: #fccbff;
   border-top: dashed #f8a9ff 10px;
@@ -70,5 +51,19 @@ body footer {
   position: fixed;
   left: 0;
   bottom: 0;
+}
+body footer #slackimg {
+  width: 300px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: -180%;
+  transform: translate(-50%, 0);
   z-index: -1;
+}
+@media screen and (max-width: 500px) {
+  body footer #slackimg {
+    width: 250px;
+    top: -140%;
+  }
 }
