@@ -1,14 +1,13 @@
 body {
   background-color: #fae6ff;
-  font-family: sans-serif;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
   color: #3478d1;
   margin: 0; }
   body a {
     color: #3478d1; }
     body a:hover {
       color: #7cb2fa; }
-  body ul {
-    list-style-type: square; }
   body li {
     margin-bottom: 7px; }
   body main {
@@ -36,9 +35,6 @@ body {
     position: fixed;
     left: 0;
     bottom: 0; }
-    @media screen and (max-width: 600px) {
-      body footer .creditsList {
-        font-size: 12px; } }
     body footer nav {
       display: inline-block;
       margin: 12px; }
