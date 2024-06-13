@@ -78,13 +78,13 @@ body footer #slackimg {
   display: inline-block;
   position: absolute;
   left: 50%;
-  top: -195%;
+  margin-top: -14.8em;
   transform: translate(-50%, 0);
   z-index: -1;
 }
 @media screen and (max-width: 500px) {
   body footer #slackimg {
     width: 280px;
-    top: 170%;
+    margin-top: -13em;
   }
 }
