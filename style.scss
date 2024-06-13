@@ -1,89 +1,100 @@
+$primary: #fccbff;
+$border: #f8a9ff;
+
 body {
-  background-color: #fae6ff;
-  font-family: sans-serif;
-  color: #3478d1;
-  margin: 0;
-}
-body a {
-  color: #3478d1;
-}
-body a:hover {
-  color: #7cb2fa;
-}
-body ul {
-  list-style-type: square;
-}
-body li {
-  margin-bottom: 7px;
-}
-body main {
-  line-height: 30px;
-}
-body main .container {
-  background-color: #fccbff;
-  max-width: 1000px;
-  margin: 70px auto;
-  padding: 40px;
-  border-left: solid #f8a9ff 10px;
-  border-right: solid #f8a9ff 10px;
-}
-body main .container h1 {
-  display: inline;
-  vertical-align: middle;
-}
-body main .container #catgif {
-  width: 80px;
-  display: inline;
-  vertical-align: middle;
-  margin-left: 1em;
-}
-body footer {
-  background-color: #fccbff;
-  border-top: dashed #f8a9ff 10px;
-  height: 120px;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-}
-body footer nav {
-  display: inline-block;
-  margin: 12px;
-}
-body footer nav a {
-  display: block;
-  padding: 10px;
-  background-color: white;
-  color: #3478d1;
-  border-radius: 8px;
-  margin-bottom: 0.5em;
-}
-body footer .socials img {
-  float: right;
-  width: 50px;
-  display: block;
-  margin-top: 1em;
-  margin-right: 1em;
-  filter: opacity(60%);
-}
-body footer .socials img:hover {
-  filter: opacity(40%);
-}
-body footer .socials #insta {
-  width: 56px;
-  margin-top: calc(1em - 3px);
-}
-body footer #slackimg {
-  width: 320px;
-  display: inline-block;
-  position: absolute;
-  left: 50%;
-  top: -195%;
-  transform: translate(-50%, 0);
-  z-index: -1;
-}
-@media screen and (max-width: 500px) {
-  body footer #slackimg {
-    width: 280px;
-  }
+    background-color: #fae6ff;
+    font-family: sans-serif;
+    color: #3478d1;
+    margin: 0;
+    a {
+        color: #3478d1;
+        &:hover {
+            color: #7cb2fa;
+        }
+    }
+    ul {
+        list-style-type: square;
+    }
+    li {
+        margin-bottom: 7px;
+    }
+    main {
+        line-height: 30px;
+
+        .container {
+            background-color: $primary;
+            max-width: 1000px;
+            margin: 70px auto;
+            padding: 40px;
+            border-left: solid $border 10px;
+            border-right: solid $border 10px;
+
+            h1 {
+                display: inline;
+                vertical-align: middle;
+            }
+            #catgif {
+                width: 80px;
+                display: inline;
+                vertical-align: middle;
+                margin-left: 1em;
+            }
+        }
+    }
+    footer {
+        background-color: $primary;
+        border-top: dashed $border 10px;
+        height: 120px;
+        width: 100%;
+        position:fixed;
+        left: 0;
+        bottom:0;
+
+        nav {
+            display: inline-block;
+            margin:12px;
+
+            a { // 'a' tags are stored inside of a nav tag so they may be displayed as blocks, while staying clickable as inlines.
+                display: block;
+                padding: 10px;
+                background-color: white;
+                color: #3478d1;
+                border-radius: 8px;
+                margin-bottom: 0.5em;
+            }
+        }
+        .socials {
+            img {
+                float: right;
+                width: 50px;
+                display: block;
+                margin-top: 1em;
+                margin-right: 1em;
+                filter: opacity(60%);
+
+                &:hover {
+                    filter:opacity(40%);
+                }
+            }
+            #insta {
+                width: 56px;
+                margin-top: calc(1em + -3px); // when the svgs are completely different sizes <33
+            }
+        }
+        #slackimg {
+            width: 320px;
+            display:inline-block;
+            position: absolute;
+            left: 50%;
+            top: -195%;
+            transform: translate(-50%, 0);
+            z-index: -1;
+
+            @media screen and (max-width: 500px) {
+                & {
+                    width: 280px;
+                }
+            }
+        }
+    }
 }
