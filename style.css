@@ -58,7 +58,7 @@ body main #slackimg {
 }
 @media screen and (max-width: 500px) {
   body main #slackimg {
-    width: 280px;
+    width: 260px;
     bottom: 5%;
   }
 }
