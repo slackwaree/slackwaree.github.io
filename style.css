@@ -37,6 +37,7 @@ body main .container {
 body main .container h1 {
   display: inline;
   vertical-align: middle;
+  font-weight: 700;
 }
 body main .container #catgif {
   width: 80px;
