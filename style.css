@@ -50,7 +50,7 @@ body main .container #catgif {
 body main #slackimg {
   width: 320px;
   display: inline-block;
-  position: absolute;
+  position: fixed;
   left: 50%;
   bottom: 4%;
   transform: translate(-50%, 0);
