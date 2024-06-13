@@ -4,10 +4,19 @@ body {
   color: #3478d1;
   margin: 0;
 }
-body a {
-  color: #3478d1;
+body nav {
+  display: inline-block;
+  margin: 12px;
 }
-body a:hover {
+body nav a {
+  display: inline-block;
+  padding: 10px;
+  background-color: white;
+  color: #3478d1;
+  border-radius: 8px;
+  text-decoration: none;
+}
+body nav a:hover {
   color: #7cb2fa;
 }
 body ul {
@@ -61,32 +70,5 @@ body footer {
   position: fixed;
   left: 0;
   bottom: 0;
-  z-index: -2;
-}
-body footer nav {
-  display: inline-block;
-  margin: 12px;
-}
-body footer nav a {
-  display: block;
-  padding: 10px;
-  background-color: white;
-  color: #3478d1;
-  border-radius: 8px;
-  margin-bottom: 0.5em;
-}
-body footer .socials img {
-  float: right;
-  width: 50px;
-  display: block;
-  margin-top: 1em;
-  margin-right: 1em;
-  filter: opacity(60%);
-}
-body footer .socials img:hover {
-  filter: opacity(40%);
-}
-body footer .socials #insta {
-  width: 56px;
-  margin-top: calc(1em - 3px);
+  z-index: -1;
 }
