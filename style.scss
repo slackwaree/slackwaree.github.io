@@ -3,7 +3,8 @@ $border: #f8a9ff;
 
 body {
     background-color: #fae6ff;
-    font-family: sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600; // default. changes if specified otherwise.
     color: #3478d1;
     margin: 0;
     a {
@@ -11,9 +12,6 @@ body {
         &:hover {
             color: #7cb2fa;
         }
-    }
-    ul {
-        list-style-type: square;
     }
     li {
         margin-bottom: 7px;
@@ -49,12 +47,6 @@ body {
         position:fixed;
         left: 0;
         bottom:0;
-
-        @media screen and (max-width: 600px) {
-            .creditsList {
-                font-size: 12px;
-            }
-        }
 
         nav {
             display: inline-block;
