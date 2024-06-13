@@ -85,6 +85,6 @@ body footer #slackimg {
 @media screen and (max-width: 500px) {
   body footer #slackimg {
     width: 280px;
-    top: -18%;
+    top: 170%;
   }
 }
