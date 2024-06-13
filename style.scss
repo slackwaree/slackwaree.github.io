@@ -86,13 +86,14 @@ body {
             display:inline-block;
             position: absolute;
             left: 50%;
-            top: -195%;
+            margin-top: -14.8em;
             transform: translate(-50%, 0);
             z-index: -1;
 
             @media screen and (max-width: 500px) {
                 & {
                     width: 280px;
+                    margin-top: -13em;
                 }
             }
         }
