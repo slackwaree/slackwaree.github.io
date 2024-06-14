@@ -1,6 +1,8 @@
 $primary: #fccbff;
 $border: #f8a9ff;
 
+$button-animation: all 0.2s ease-in-out;
+
 body {
     background-color: #fae6ff;
     font-family: sans-serif;
@@ -17,7 +19,17 @@ body {
             background-color: white;
             color: #3478d1;
             border-radius: 8px;
-            margin-bottom: 0.5em;
+            text-decoration: none;
+            width: 50px;
+            transition: $button-animation;
+            text-align: center;
+            box-shadow: 5px 5px 10px $primary;
+
+            &:hover {
+                transition: $button-animation;
+                width: 70px;
+                text-decoration: underline;
+            }
         }
     }
     ul {
@@ -57,6 +69,17 @@ body {
         position:fixed;
         left: 0;
         bottom:0;
+
+        a {
+            box-shadow: 5px 5px 10px #e8b9eb;
+            width: 100px;
+            transition: $button-animation;
+
+            &:hover {
+                transition: $button-animation;
+                width: 120px;
+            }
+        }
 
         #slackimg {
             width: 300px;
