@@ -27,21 +27,54 @@ body {
     margin-bottom: 7px; }
   body main {
     line-height: 30px; }
-    body main .container {
+    body main #intro-section .container {
       background-color: #fccbff;
+      border-left: solid #f8a9ff 10px;
+      border-right: solid #f8a9ff 10px;
       max-width: 1000px;
       margin: 1em auto;
-      padding: 40px;
-      border-left: solid #f8a9ff 10px;
-      border-right: solid #f8a9ff 10px; }
-      body main .container h1 {
+      padding: 40px; }
+      body main #intro-section .container h1 {
         display: inline;
-        vertical-align: middle; }
-      body main .container #catgif {
+        vertical-align: middle;
+        font-size: 2em; }
+      body main #intro-section .container #catgif {
         width: 80px;
         display: inline;
         vertical-align: middle;
         margin-left: 1em; }
+    body main #projects-section h2 {
+      text-align: center;
+      background-color: white;
+      padding: 15px;
+      font-size: 1.8em;
+      max-width: calc(1100px - 30px);
+      margin: 1em auto; }
+    body main #projects-section .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      max-width: 1100px;
+      margin: 1em auto;
+      margin-bottom: 20em;
+      grid-gap: 1em; }
+      @media screen and (max-width: 600px) {
+        body main #projects-section .container {
+          grid-template-columns: 1fr; } }
+      body main #projects-section .container .child-container {
+        background-color: #fccbff;
+        border-left: solid #f8a9ff 10px;
+        border-right: solid #f8a9ff 10px;
+        padding: 20px; }
+        body main #projects-section .container .child-container h3 {
+          font-size: 1.5em; }
+        body main #projects-section .container .child-container img {
+          width: 50%;
+          display: inline;
+          float: left;
+          margin-right: 1em; }
+        body main #projects-section .container .child-container a {
+          color: inherit; }
   body footer {
     background-color: #fccbff;
     border-top: dashed #f8a9ff 10px;

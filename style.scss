@@ -24,7 +24,7 @@ body {
             transition: $button-animation;
             text-align: center;
             box-shadow: 5px 5px 10px $primary;
-
+    
             &:hover {
                 transition: $button-animation;
                 width: 70px;
@@ -41,23 +41,69 @@ body {
     main {
         line-height: 30px;
 
-        .container {
-            background-color: $primary;
-            max-width: 1000px;
-            margin: 1em auto;
-            padding: 40px;
-            border-left: solid $border 10px;
-            border-right: solid $border 10px;
-
-            h1 {
-                display: inline;
-                vertical-align: middle;
+        #intro-section {
+            .container {
+                background-color: $primary;
+                border-left: solid $border 10px;
+                border-right: solid $border 10px;
+                max-width: 1000px;
+                margin: 1em auto;
+                padding: 40px;
+    
+                h1 {
+                    display: inline;
+                    vertical-align: middle;
+                    font-size: 2em;
+                }
+                #catgif {
+                    width: 80px;
+                    display: inline;
+                    vertical-align: middle;
+                    margin-left: 1em;
+                }
             }
-            #catgif {
-                width: 80px;
-                display: inline;
-                vertical-align: middle;
-                margin-left: 1em;
+        }
+        #projects-section {
+            h2 {
+                text-align: center;
+                background-color: white;
+                padding: 15px;
+                font-size: 1.8em;
+                max-width: calc(1100px - 30px); // accounts for padding
+                margin: 1em auto;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                max-width: 1100px;
+                margin: 1em auto;
+                margin-bottom: 20em;
+                grid-gap: 1em;
+
+                @media screen and (max-width: 600px) {
+                    grid-template-columns: 1fr;
+                }
+
+                .child-container {
+                    background-color: $primary;
+                    border-left: solid $border 10px;
+                    border-right: solid $border 10px;
+                    padding: 20px;
+
+                    h3 {
+                        font-size: 1.5em;
+                    }
+                    img {
+                        width: 50%;
+                        display: inline;
+                        float: left;
+                        margin-right: 1em;
+                    }
+                    a {
+                        color: inherit;
+                    }
+                }
             }
         }
     }
