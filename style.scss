@@ -4,14 +4,17 @@ $border: #f8a9ff;
 $button-animation: all 0.2s ease-in-out;
 
 body {
+    background-image: url(img/bg-pattern.svg);
+    background-blend-mode: color-burn;
+    background-attachment: fixed;
+    background-size: cover;
     background-color: #fae6ff;
     font-family: 'Nunito', sans-serif;
     color: #3478d1;
     margin: 0;
     
     nav {
-        display: inline-block;
-        margin:12px;
+        margin: 12px;
 
         a { // 'a' tags are stored inside of a nav tag so they may be displayed as blocks, while staying clickable as inlines.
             display: inline-block;
@@ -34,9 +37,10 @@ body {
     }
     ul {
         list-style-type: square;
-    }
-    li {
-        margin-bottom: 7px;
+        
+        li {
+            margin-bottom: 7px;
+        }
     }
     main {
         line-height: 30px;
@@ -71,17 +75,17 @@ body {
                 font-size: 1.8em;
                 max-width: calc(1100px - 30px); // accounts for padding
                 margin: 1em auto;
+                box-shadow: 5px 5px 10px #e8b9eb;
             }
             .container {
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: auto;
+                grid-template: auto / repeat(2, 1fr);
                 max-width: 1100px;
                 margin: 1em auto;
                 margin-bottom: 20em;
                 grid-gap: 1em;
 
-                @media screen and (max-width: 600px) {
+                @media screen and (max-width: 768px) {
                     grid-template-columns: 1fr;
                 }
 
@@ -90,9 +94,13 @@ body {
                     border-left: solid $border 10px;
                     border-right: solid $border 10px;
                     padding: 20px;
+                    max-height: 25em;
 
                     h3 {
                         font-size: 1.5em;
+                    }
+                    ul {
+                        line-height: 30px;
                     }
                     img {
                         width: 50%;
@@ -103,6 +111,37 @@ body {
                     a {
                         color: inherit;
                     }
+                    .blog-container {
+                        height: 70%;
+                        overflow: auto;
+
+                        .blog-entry {
+                            background-color: white;
+                            padding: 10px;
+                            border-radius: 8px;
+                            margin: 1em 0;
+
+                            .tag {
+                                background-color: rgb(245, 170, 255);
+                                color: white;
+                                padding: 0.4em;
+                                border-radius: 8px;
+                                display: inline;
+                            }
+
+                            h3, h4 {
+                                margin: 0.5em auto;
+                            }
+                            h4 {
+                                color: rgb(145, 189, 255);
+                                display: inline;
+                                margin-right: 0.5em;
+                            }
+                            hr {
+                                border: 1px solid rgb(243, 243, 243);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -112,8 +151,7 @@ body {
         border-top: dashed $border 10px;
         height: 120px;
         width: 100%;
-        position:fixed;
-        left: 0;
+        position: fixed;
         bottom:0;
 
         a {
@@ -126,20 +164,17 @@ body {
                 width: 120px;
             }
         }
-
         #slackimg {
-            width: 300px;
-            display:inline-block;
+            width: 180px;
             position: absolute;
             left: 50%;
             top: -180%;
             transform: translate(-50%, 0);
-            z-index: -1;
 
-            @media screen and (max-width: 500px) {
-                width: 230px;
-                top: -140%;
-            }
+            // @media screen and (max-width: 500px) {
+            //     width: 150px;
+            //     top: -150%;
+            // } # If the next update functions without this media query, remove completely.
         }
     }
 }

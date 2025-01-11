@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2R6VRT9Q4Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2R6VRT9Q4Z');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
@@ -11,11 +20,13 @@
     <title>slack's epic gamer site</title>
 </head>
 <body>
+    <script src="scripts/main.js"></script>
     <header>
         <nav>
             <a href="https://www.instagram.com/slaccware/" target="_blank">Insta</a>
             <a href="https://cara.app/slack" target="_blank">Cara</a>
             <a href="https://www.tumblr.com/mhen-photography" target="_blank">Tumblr</a>
+            <a href="https://bsky.app/profile/slackkkk.bsky.social" target="_blank">Bsky</a>
         </nav>
     </header>
     <main>
@@ -28,20 +39,45 @@
                     <li>artist/photographer</li>
                 </ul>
                 <p>
-                    The main purpose of this site is to be used as a hosting platform for my other projects, so that's
+                    Hello!! The main purpose of this site is to be used as a hosting platform for my other projects, so that's
                     why there's not very much actual content here lol
                 </p>
             </div>
         </section>
         <section id="projects-section">
-            <h2>Some stuff I've done</h2>
+            <h2>Some stuff I've done!</h2>
             <div class="container">
+                <div class="child-container">
+                    <h2>Blog!!</h2>
+                    <div class="blog-container"> <!-- Please just collapse this div....... it's for your own mental health...-->
+                        <div class="blog-entry">
+                            <h3>Site update</h3>
+                            <div class="flex">
+                                <h4>28.21.25</h4>
+                                <div class="tag">Site related</div>
+                            </div>
+                            <hr>
+                            <p>
+                                Finally started implementing some stuff I've wanted here for a while - including this blog. On the backend it's extremely
+                                simple (All of these posts are written manually in HTML because idfk how else to do it without overcomplexifying everything
+                                for myself (aka im stupid)). I'll prolly keep this blog at a maxiumum of like 15 posts at a time or so and archive the older
+                                posts just to make it run a little cleaner. Also optimized some of the SCSS code to make it more readable..... hopefully. 
+                                If something doesn't look right or you think there's a better approach to something I've done here feel free to open an
+                                <a href="https://github.com/slackwaree/slackwaree.github.io/issues" target="_blank">issue</a>.
+                            </p>
+                        </div>
+                    </div> 
+                </div>
                 <div class="child-container">
                     <img src="https://raw.githubusercontent.com/slackwaree/cute-difficulty-faces/main/previews/pack-icon.png" alt="pack icon">
                     <h3>Cute Difficulty Faces</h3>
                     <p>
-                     A texture pack for Geometry Dash that Kawaii-ifies the existing difficulty faces, with support for the 
-                    'More Difficulties' mod by Uproxide. You can find it on the Texture Pack Workshop or download the latest release 
+                     A texture pack for Geometry Dash that Kawaii-ifies the existing difficulty faces, with support for:
+                     <ul>
+                        <li><b>More Difficulties</b> by Uproxide</li>
+                        <li><b>Grandpa Demon</b> by itzkiba</li>
+                     </ul> 
+                     You can find it on the Texture Pack Workshop or download the latest release 
                     <a href="https://github.com/slackwaree/cute-difficulty-faces/releases/latest/download/cute-difficulty-faces.zip" target="_blank">here</a>!
                     </p>
                 </div>
@@ -49,7 +85,7 @@
         </section>
     </main>
     <footer>
-        <img src="img/slack.png" alt="oc art" id="slackimg">
+        <img src="img/slack-img.png" alt="oc art" id="slackimg" onclick="slackClicked()">
         <nav>
             <a href="https://github.com/slackwaree/slackwaree.github.io" target="_blank">Site Source</a>
         </nav>
