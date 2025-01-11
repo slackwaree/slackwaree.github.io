@@ -171,10 +171,10 @@ body {
             top: -180%;
             transform: translate(-50%, 0);
 
-            // @media screen and (max-width: 500px) {
-            //     width: 150px;
-            //     top: -150%;
-            // } # If the next update functions without this media query, remove completely.
+            @media screen and (max-width: 500px) {
+                width: 150px;
+                top: -150%;
+            }
         }
     }
 }
