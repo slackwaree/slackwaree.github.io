@@ -12,12 +12,19 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="https://www.instagram.com/slaccware/" target="_blank">Insta</a>
-            <a href="https://cara.app/slack" target="_blank">Cara</a>
-            <a href="https://www.tumblr.com/mhen-photography" target="_blank">Tumblr</a>
-            <a href="https://bsky.app/profile/slackkkk.bsky.social" target="_blank">Bsky</a>
-        </nav>
+        <img src="img/burger-menu.svg" id="hamburger-icon" alt="hamburger icon" onClick="transitionMenu()">
+        <div class="dropdown" id="dropdown">
+            <div class="content">
+                <h2>Connections</h2>
+                <a href="https://www.instagram.com/slaccware/" target="_blank">Instagram</a>
+                <a href="https://www.tumblr.com/mhen-photography" target="_blank">Tumblr</a>
+                <a href="https://bsky.app/profile/slackkkk.bsky.social" target="_blank">Blsky (Art)</a>
+                <a href="https://bsky.app/profile/mhenphoto.bsky.social" target="_blank">Blsky (Photography)</a>
+                <a href="https://steamcommunity.com/profiles/76561199273653237/">Steam</a>
+                <a href=#https://www.youtube.com/@slackreal target="_blank">YouTube</a>
+                <a href="https://github.com/slackwaree/slackwaree.github.io" id="site-source" target="_blank">Site Source</a>
+            </div>
+        </div>
     </header>
     <main>
         <section id="intro-section">
@@ -76,9 +83,6 @@
     </main>
     <footer>
         <img src="img/slack-img.png" alt="oc art" id="slackimg" onclick="slackClicked()">
-        <nav>
-            <a href="https://github.com/slackwaree/slackwaree.github.io" target="_blank">Site Source</a>
-        </nav>
     </footer>
     <script src="scripts/main.js"></script>
 </body>
