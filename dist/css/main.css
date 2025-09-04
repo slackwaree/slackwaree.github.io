@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #fccbff;
+  border-left: 10px solid #f8a9ff;
+  border-right: 10px solid #f8a9ff;
+}
+.container p, .container small {
+  line-height: 1.8rem;
+  margin-top: 1rem;
+}
+
+.container-large {
+  margin: 0 auto;
+  padding: 40px;
+  width: 100%;
+  max-width: 1100px;
+}
+.container-large h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  display: inline;
+  vertical-align: middle;
+}
+.container-large #cat-gif {
+  vertical-align: middle;
+  width: auto;
+  height: 60px;
+  margin: 0 1rem;
+}
+.container-large small {
+  font-style: italic;
+  font-size: 0.8rem;
+  filter: opacity(50%);
+  text-align: right;
+  display: block;
+}
+.container-large .socials a {
+  text-decoration: none;
+}
+.container-large .socials img {
+  vertical-align: middle;
+  margin: auto 2px;
+  margin-bottom: -1rem;
+  transition: 0.2s ease all;
+}
+.container-large .socials img:hover {
+  filter: opacity(50%);
+}
+
+.container-small {
+  height: 25rem;
+  padding: 1rem;
+}
+.container-small h2 {
+  margin: 1rem;
+}
+.container-small .blog-container {
+  overflow: auto;
+  height: 76%;
+}
+.container-small article {
+  background-color: white;
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  line-height: 1.8rem;
+  margin-bottom: 2rem;
+}
+.container-small article h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.container-small article .date {
+  color: #91bdff;
+  font-weight: 700;
+}
+.container-small article .tag {
+  padding: 8px;
+  border-radius: 12px;
+  background-color: #f5aaff;
+  color: white;
+}
+.container-small article hr {
+  margin: 1rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.container-small #pack-icon {
+  float: left;
+  margin-right: 1rem;
+  width: 50%;
+}
+.container-small.h2 {
+  display: inline-block;
+}
+
+h2#highlighted-h2 {
+  max-width: 1100px;
+  background-color: white;
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 10px;
+  font-weight: 700;
+  margin: 1rem auto;
+  box-shadow: 6px 6px 0 #ffacec;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 7rem;
+  background-color: #fccbff;
+  border-top: 10px dashed #f8a9ff;
+}
+footer h3 {
+  align-self: flex-end;
+  margin: 0.5rem;
+  font-weight: 400;
+}
+footer h3, footer span {
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url(../../assets/fonts/Nunito-VariableFont_wght.ttf), url(../../assets/fonts/Nunito-Italic-VariableFont_wght.ttf);
+}
+body {
+  background-color: #fae6ff;
+  margin: 1rem 0;
+  margin-bottom: 10rem;
+}
+body * {
+  font-family: "Nunito", sans-serif;
+  color: #3478d1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
