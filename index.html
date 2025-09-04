@@ -3,87 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/gif" href="../img/favicon-animated.gif">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css">
     <title>slack's epic gamer site</title>
 </head>
 <body>
-    <header>
-        <img src="img/burger-menu.svg" id="hamburger-icon" alt="hamburger icon" onClick="transitionMenu()">
-        <div class="dropdown" id="dropdown">
-            <div class="content">
-                <h2>Connections</h2>
-                <a href="https://www.instagram.com/slaccware/" target="_blank">Instagram</a>
-                <a href="https://www.tumblr.com/mhen-photography" target="_blank">Tumblr</a>
-                <a href="https://bsky.app/profile/slackkkk.bsky.social" target="_blank">Blsky (Art)</a>
-                <a href="https://bsky.app/profile/mhenphoto.bsky.social" target="_blank">Blsky (Photography)</a>
-                <a href="https://steamcommunity.com/profiles/76561199273653237/">Steam</a>
-                <a href=#https://www.youtube.com/@slackreal target="_blank">YouTube</a>
-                <a href="https://github.com/slackwaree/slackwaree.github.io" id="site-source" target="_blank">Site Source</a>
+    <header></header>
+    <main>
+        <div class="container container-large">
+            <h1>hihii</h1>
+            <img src="assets/img/cat.gif" alt="cat gif" id="cat-gif" height="60px" width="auto"> <!-- ADD SIZE -->
+            <p>
+                Hello!! I’m an artist and photographer from New Zealand. I go by <b>he/him</b> and I love tramping, video games, and technology. 
+                I’m currently studying web design and development. I tend to be pretty anxious and timid (especially around new people), 
+                so if you wanna say something by all means feel free to DM but please know I can't hold a conversation for long!
+            </p>
+            <small>* This is my silly site and not an actual portfolio or anything :3</small>
+            <div class="socials">
+                <a href="https://www.tumblr.com/mhen-photography" target="_blank">
+                    <img src="assets/img/tumblr-icon.svg" alt="tumblr icon" height="45px" width="auto">
+                </a>
+                <a href="https://www.instagram.com/slaccware/" target="_blank">
+                    <img src="assets/img/insta-icon.svg" alt="insta icon" height="70px" width="auto">
+                </a>
+                <a href="https://bsky.app/profile/slackkkk.bsky.social" target="_blank">
+                    <img src="assets/img/bsky-icon.svg" alt="bsky icon" height="45px" width="auto">
+                </a>  
             </div>
         </div>
-    </header>
-    <main>
-        <section id="intro-section">
-            <div class="container">
-                <h1>hihii</h1>
-                <img src="img/cat.gif" alt="cat" id="catgif">
-                <ul>
-                    <li>he/him, nz</li>
-                    <li>artist/photographer</li>
-                </ul>
+        <h2 id="highlighted-h2">Some stuff I've done!!</h2>
+        <div class="grid">
+            <div class="container container-small">
+                <h2 id="highlighted-h2">Blog!!</h2>
+                <div class="blog-container">
+                    <article>
+                        <h3>Site v2!</h3>
+                        <span class="date">11.01.25</span>
+                        <span class="tag">Site related</span>
+                        <hr>
+                        <p>
+                            blah blah blah blah blah!
+                        </p>
+                    </article>
+                    <article>
+                        <h3>Site update</h3>
+                        <span class="date">11.01.25</span>
+                        <span class="tag">Site related</span>
+                        <hr>
+                        <p>
+                            Finally started implementing some stuff I've wanted here for a while - including this blog. On the backend it's extremely simple
+                            (All of these posts are written manually in HTML because idfk how else to do it without overcomplexifying everything for myself
+                            (aka im stupid)). I'll prolly keep this blog at a maxiumum of like 15 posts at a time or so and archive the older posts just to 
+                            make it run a little cleaner. Also optimized some of the SCSS code to make it more readable..... hopefully. If something doesn't 
+                            look right or you think there's a better approach to something I've done here feel free to open an 
+                            <a href="https://github.com/slackwaree/slackwaree.github.io/issues/new">issue</a>. 
+                        </p>
+                    </article>
+                </div>
+            </div>
+            <div class="container container-small">
+                <img src="https://raw.githubusercontent.com/slackwaree/cute-difficulty-faces/refs/heads/main/previews/pack-icon.png" 
+                alt="pack icon" id="pack-icon">
+                <h2>Cute Difficulty Faces</h2>
                 <p>
-                    Hello!! The main purpose of this site is to be used as a hosting platform for my other projects, so that's
-                    why there's not very much actual content here lol
+                    A texture pack for Geometry Dash that Kawaii-ifies the existing difficulty faces, with support for 
+                    More Difficulties by Uproxide. You can find it on the Texture Pack
+                    Workshop or download the latest release 
+                    <a href="https://github.com/slackwaree/cute-difficulty-faces/releases/latest/download/cute-difficulty-faces.zip">here</a>!
                 </p>
             </div>
-        </section>
-        <section id="projects-section">
-            <h2>Some stuff I've done!</h2>
-            <div class="container">
-                <div class="child-container">
-                    <h2>Blog!!</h2>
-                    <div class="blog-container"> <!-- Please just collapse this div....... it's for your own mental health...-->
-                        <div class="blog-entry">
-                            <h3>Site update</h3>
-                            <div class="flex">
-                                <h4>11.01.25</h4>
-                                <div class="tag">Site related</div>
-                            </div>
-                            <hr>
-                            <p>
-                                Finally started implementing some stuff I've wanted here for a while - including this blog. On the backend it's extremely
-                                simple (All of these posts are written manually in HTML because idfk how else to do it without overcomplexifying everything
-                                for myself (aka im stupid)). I'll prolly keep this blog at a maxiumum of like 15 posts at a time or so and archive the older
-                                posts just to make it run a little cleaner. Also optimized some of the SCSS code to make it more readable..... hopefully. 
-                                If something doesn't look right or you think there's a better approach to something I've done here feel free to open an
-                                <a href="https://github.com/slackwaree/slackwaree.github.io/issues" target="_blank">issue</a>.
-                            </p>
-                        </div>
-                    </div> 
-                </div>
-                <div class="child-container">
-                    <img src="https://raw.githubusercontent.com/slackwaree/cute-difficulty-faces/main/previews/pack-icon.png" alt="pack icon">
-                    <h3>Cute Difficulty Faces</h3>
-                    <p>
-                     A texture pack for Geometry Dash that Kawaii-ifies the existing difficulty faces, with support for:
-                     <ul>
-                        <li><b>More Difficulties</b> by Uproxide</li>
-                        <li><b>Grandpa Demon</b> by itzkiba</li>
-                     </ul> 
-                     You can find it on the Texture Pack Workshop or download the latest release 
-                    <a href="https://github.com/slackwaree/cute-difficulty-faces/releases/latest/download/cute-difficulty-faces.zip" target="_blank">here</a>!
-                    </p>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
     <footer>
-        <img src="img/slack-img.png" alt="oc art" id="slackimg" onclick="slackClicked()">
+        <h3 id="clock-widget">&#128712; It is currently <span id="current-time"></span> on a <span id="current-day"></span> for me.</h3>
     </footer>
-    <script src="scripts/main.js"></script>
+    <script src="dist/js/main.js"></script>
 </body>
 </html>
