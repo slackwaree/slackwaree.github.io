@@ -1,0 +1,30 @@
+@use 'base' as *;
+
+@font-face {
+    font-family: "Nunito",;
+    src: url(../../assets/fonts/Nunito-VariableFont_wght.ttf), 
+    url(../../assets/fonts/Nunito-Italic-VariableFont_wght.ttf);
+}
+
+body {
+    background-color: $light-pink;
+    margin: 1rem 0;
+    margin-bottom: 10rem;
+    
+    * {
+        font-family: "Nunito", sans-serif;
+        color: #3478d1;
+    }
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: $max-width;
+    margin: 0 auto;
+    gap: 1rem;
+}
+@media only screen and (min-width: 768px) { // Desktop styles
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
