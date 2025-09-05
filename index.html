@@ -7,7 +7,6 @@
     <title>slack's epic gamer site</title>
 </head>
 <body>
-    <header></header>
     <main>
         <div class="container container-large">
             <h1>hihii</h1>
@@ -37,11 +36,22 @@
                 <div class="blog-container">
                     <article>
                         <h3>Site v2!</h3>
-                        <span class="date">11.01.25</span>
+                        <span class="date">05.09.25</span>
                         <span class="tag">Site related</span>
+                        <span class="tag">IRL</span>
                         <hr>
                         <p>
-                            blah blah blah blah blah!
+                            Woah its been a while since I made another update! I've yet again re-organized how a lot of the code is structured, including 
+                            moving source files into <code>src/</code> and all the distrabutable code into <code>dist/</code>. Hopefully this should make
+                            things a little bit easier for myself to maintain in the future. The site was pretty much re-built from the ground up as I wanted
+                            to split my original <code>main.scss</code> file into multiple partials, again, for maintainance and readability purposes. I also
+                            made that little 24-hour clock widget you might have noticed in the bottom-left corner. It displays the current time in my local timezone
+                            (NZST) so hopefully that helps someone out :].
+                        </p>
+                        <p>
+                            In other news... I've bought a motorbike! It's a 2017 250cc Suzuki Inazuma. A decent upgrade from my 50cc scooter. As of writing I'm
+                            still in the process of aquiring all the neccesary gear but it feels great having a lot more power behind me on the road. I think that's
+                            all for now anyways.
                         </p>
                     </article>
                     <article>
@@ -74,8 +84,8 @@
         </div>
     </main>
     <footer>
-        <h3 id="clock-widget">&#128712; It is currently <span id="current-time"></span> on a <span id="current-day"></span> for me.</h3>
+        <h3 id="clock-widget">ⓘ It is currently <span id="current-time"></span> on a <span id="current-day"></span> for me.</h3>
     </footer>
-    <script src="dist/js/main.js"></script>
+    <script src="src/js/main.js"></script>
 </body>
 </html>
