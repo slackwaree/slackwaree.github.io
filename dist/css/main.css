@@ -14,7 +14,6 @@
   line-height: 1.8rem;
   margin-top: 1rem;
 }
-
 .container-large {
   margin: 0 auto;
   padding: 40px;
@@ -52,13 +51,9 @@
 .container-large .socials img:hover {
   filter: opacity(50%);
 }
-
 .container-small {
   height: 25rem;
   padding: 1rem;
-}
-.container-small h2 {
-  margin: 1rem;
 }
 .container-small .blog-container {
   overflow: auto;
@@ -131,6 +126,7 @@ footer h3 {
 }
 footer h3, footer span {
   font-style: italic;
+  font-size: 1rem; /* RE-WRITE IN SCSS */
 }
 
 @font-face {
@@ -150,6 +146,7 @@ body * {
 .grid {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: auto;
   max-width: 1100px;
   margin: 0 auto;
   gap: 1rem;

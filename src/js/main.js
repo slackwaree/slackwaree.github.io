@@ -7,7 +7,7 @@ var DAYS_LIST = ['Monday', 'Tuesday', 'Wednesday',
     'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 function setDate() {
-    var date = new Date();
+    var date = new Date(); // This function was written in TS if it looks off
     getCurrentDate = new Date(date.getTime() + (TZ_OFFSET + date.getTimezoneOffset()) * 60 * 1000);
     minToString = getCurrentDate.getMinutes().toString();
     if (minToString.length == 1) {
