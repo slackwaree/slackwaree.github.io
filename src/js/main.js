@@ -1,15 +1,16 @@
 let currentTime = document.getElementById('current-time');
 let currentDay = document.getElementById('current-day');
-const TZ_OFFSET = -720;
-let dstOffset;
+let dstOffset = 0;
 let isDaylightSavings;
-let getCurrentDate;
+const TZ_OFFSET = -720;
 
 const DAYS_LIST = ['Monday', 'Tuesday', 'Wednesday',
     'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-setDate();
-function checkDST(getCurrentDate) {
+let date = new Date(); 
+let getCurrentDate = new Date;
+
+(function checkDST() {
     if ( // date is between septemper and april?
         getCurrentDate.getMonth() <= 8 ||
         getCurrentDate.getMonth() <= 3
@@ -31,25 +32,25 @@ function checkDST(getCurrentDate) {
     }
     else {
         dstOffset = 3600 / 60; // DST difference
-        console.log('h');
     }
-}
-function setDate() {
-    let date = new Date(); 
-    let getCurrentDate = new Date(date.getTime() + (TZ_OFFSET + dstOffset + date.getTimezoneOffset()) * 60 * 1000);
+    getCurrentDate + TZ_OFFSET + dstOffset + date.getTimezoneOffset() * 60 * 1000;  // add dst difference to getCurrentDate
+})(getCurrentDate);
+(function setDate() {
     let minToString = getCurrentDate.getMinutes().toString();
-    checkDST(getCurrentDate);
+    // getDST resulsts in NaN
     if (minToString.length == 1) {
-        currentTime.textContent = "".concat(getCurrentDate.getHours(), ":0").concat(getCurrentDate.getMinutes());
+        currentTime.textContent = `${getCurrentDate.getHours()}:0${getCurrentDate.getMinutes()}`;
     }
     else {
-        currentTime.textContent = "".concat(getCurrentDate.getHours(), ":").concat(getCurrentDate.getMinutes());
+        currentTime.textContent = `${getCurrentDate.getHours()}:${getCurrentDate.getMinutes()}`;
     }
     currentDay.textContent = DAYS_LIST[getCurrentDate.getDay()];
     setDateAsync();
-}
-function setDateAsync() {
-    setTimeout(function () {
-        setDate();
-    }, 1000);
-}
+
+    function setDateAsync() {
+        setTimeout(function () {
+            setDate();
+            // console.log('h');
+        }, 1000);
+    }
+})();
