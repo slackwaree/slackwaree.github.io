@@ -14,6 +14,7 @@ body {
   margin: 1rem 0;
   margin-bottom: 10rem;
   padding-bottom: 10rem;
+  background-color: #fae6ff;
 }
 body * {
   font-family: "Nunito", sans-serif;
@@ -33,10 +34,6 @@ body * {
     grid-template-columns: 1fr 1fr;
   }
 }
-body {
-  background-color: #fae6ff;
-}
-
 .container {
   background-image: linear-gradient(180deg, #ffcbe9, #f8a9ff);
 }
