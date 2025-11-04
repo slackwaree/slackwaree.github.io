@@ -4,8 +4,8 @@ let dstOffset = 0;
 let isDaylightSavings;
 const TZ_OFFSET = -720;
 
-const DAYS_LIST = ['Monday', 'Tuesday', 'Wednesday',
-    'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const DAYS_LIST = ['Sunday', 'Monday', 'Tuesday',
+    'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 let date = new Date(); 
 let getCurrentDate = new Date;
