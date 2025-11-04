@@ -13,6 +13,7 @@
 body {
   margin: 1rem 0;
   margin-bottom: 10rem;
+  height: 110vh;
 }
 body * {
   font-family: "Nunito", sans-serif;
