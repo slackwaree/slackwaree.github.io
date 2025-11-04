@@ -188,6 +188,7 @@ footer #oc-art:hover {
 footer h3 {
   align-self: flex-end;
   margin: 0;
+  margin-right: 1rem;
   padding: 0.3rem 0.5rem;
   font-weight: 400;
   font-size: 1rem;
