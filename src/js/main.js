@@ -37,20 +37,18 @@ let getCurrentDate = new Date;
 })(getCurrentDate);
 (function setDate() {
     let minToString = getCurrentDate.getMinutes().toString();
-    // if (minToString.length == 1) {
-    //     currentTime.textContent = `${getCurrentDate.getHours()}:0${getCurrentDate.getMinutes()}`;
-    // }
-    // else {
-    //     
-    // }
-    currentTime.textContent = `${getCurrentDate.getHours().toFixed(2)}:${getCurrentDate.getMinutes().toFixed(2)}`;
+    if (minToString.length == 1) {
+        currentTime.textContent = `${getCurrentDate.getHours()}:0${getCurrentDate.getMinutes()}`;
+    }
+    else {
+        currentTime.textContent = `${getCurrentDate.getHours()}:${getCurrentDate.getMinutes()}`;
+    }
     currentDay.textContent = DAYS_LIST[getCurrentDate.getDay()];
     setDateAsync();
 
     function setDateAsync() {
         setTimeout(function () {
             setDate();
-            // console.log('h');
         }, 1000);
     }
 })();
