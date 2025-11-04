@@ -61,22 +61,6 @@ footer span, footer h3 {
   background-color: white;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-*::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   border-left: 10px solid #f8a9ff;
   border-right: 10px solid #f8a9ff;
