@@ -37,13 +37,13 @@ let getCurrentDate = new Date;
 })(getCurrentDate);
 (function setDate() {
     let minToString = getCurrentDate.getMinutes().toString();
-    // getDST resulsts in NaN
-    if (minToString.length == 1) {
-        currentTime.textContent = `${getCurrentDate.getHours()}:0${getCurrentDate.getMinutes()}`;
-    }
-    else {
-        currentTime.textContent = `${getCurrentDate.getHours()}:${getCurrentDate.getMinutes()}`;
-    }
+    // if (minToString.length == 1) {
+    //     currentTime.textContent = `${getCurrentDate.getHours()}:0${getCurrentDate.getMinutes()}`;
+    // }
+    // else {
+    //     
+    // }
+    currentTime.textContent = `${getCurrentDate.getHours().toFixed(2)}:${getCurrentDate.getMinutes().toFixed(2)}`;
     currentDay.textContent = DAYS_LIST[getCurrentDate.getDay()];
     setDateAsync();
 
