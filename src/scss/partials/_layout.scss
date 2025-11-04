@@ -7,7 +7,6 @@
 }
 
 body {
-    background-color: $light-pink;
     margin: 1rem 0;
     margin-bottom: 10rem;
     
@@ -28,26 +27,27 @@ body {
         grid-template-columns: 1fr 1fr;
     }
 }
-@media (prefers-color-scheme: light) {
-    .container {
-        background-image: linear-gradient(180deg, #ffcbe9, $border);
+body {
+    background-color: $light-pink;
+}
+.container {
+    background-image: linear-gradient(180deg, #ffcbe9, $border);
+}
+article {
+    background-color: white;
+    .tag {
+        background-color: $border;
     }
-    article {
+    code {
+        background-color: rgb(232, 236, 255);
+    }
+}
+h2#highlighted-h2 {
+    background-color: white;
+}
+footer {
+    background-color: $container-bg;
+    span, h3 {
         background-color: white;
-        .tag {
-            background-color: $border;
-        }
-        code {
-            background-color: rgb(232, 236, 255);
-        }
-    }
-    h2#highlighted-h2 {
-        background-color: white;
-    }
-    footer {
-        background-color: $container-bg;
-        span, h3 {
-            background-color: white;
-        }
     }
 }
