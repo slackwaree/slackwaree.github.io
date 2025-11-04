@@ -7,10 +7,8 @@ const TZ_OFFSET = -720;
 const DAYS_LIST = ['Sunday', 'Monday', 'Tuesday',
     'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-let date = new Date(); 
-let getCurrentDate = new Date;
 
-(function checkDST() {
+function checkDST(getCurrentDate) {
     if ( // date is between septemper and april?
         getCurrentDate.getMonth() <= 8 ||
         getCurrentDate.getMonth() <= 3
@@ -33,9 +31,12 @@ let getCurrentDate = new Date;
     else {
         dstOffset = 3600 / 60; // DST difference
     }
+};
+function setDate() {
+    let date = new Date(); 
+    let getCurrentDate = new Date;
+    checkDST(date);
     getCurrentDate + TZ_OFFSET + dstOffset + date.getTimezoneOffset() * 60 * 1000;  // add dst difference to getCurrentDate
-})(getCurrentDate);
-(function setDate() {
     let minToString = getCurrentDate.getMinutes().toString();
     if (minToString.length == 1) {
         currentTime.textContent = `${getCurrentDate.getHours()}:0${getCurrentDate.getMinutes()}`;
@@ -44,11 +45,12 @@ let getCurrentDate = new Date;
         currentTime.textContent = `${getCurrentDate.getHours()}:${getCurrentDate.getMinutes()}`;
     }
     currentDay.textContent = DAYS_LIST[getCurrentDate.getDay()];
+    
     setDateAsync();
-
-    function setDateAsync() {
-        setTimeout(function () {
-            setDate();
-        }, 1000);
-    }
-})();
+};
+function setDateAsync() {
+    setTimeout(function () {
+        setDate();
+    }, 1000);
+}
+window.addEventListener('load', setDate());
