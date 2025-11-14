@@ -1,9 +1,7 @@
 import { marked } from 'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js';
 
 let postNum = 0;
-window.addEventListener('load', () => {
-    loadPost(postNum++);
-});
+window.addEventListener('load', loadPost(postNum++));
 
 async function loadPost(postNum) { // posts are named in ascending numerical order
     const url = `https://d20ryw3o58mey6.cloudfront.net/posts/${postNum}.md`;
