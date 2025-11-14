@@ -9,9 +9,15 @@ async function loadPost(postNum) { // posts are named in ascending numerical ord
         method: 'GET',
         mode: 'cors',
     });
-    if (!res.ok) throw new Error('No more posts avaliable!');
-    const getMD = await res.text();
-    renderToHTML(getMD);
+    if (!res.ok) {
+        console.warn('No more posts avaliable!');
+    }
+    else {
+        const getMD = await res.text();
+        renderToHTML(getMD);
+        postNum++;
+        loadPost(postNum);
+    }
 }
 
 function renderToHTML(getMD) {
@@ -29,5 +35,5 @@ function renderToHTML(getMD) {
 
 function removeHoldState() {
     const holdStatusText = document.querySelector('#hold-status');
-    holdStatusText.remove();
+    holdStatusText.textContent = '';
 }
