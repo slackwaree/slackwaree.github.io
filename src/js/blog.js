@@ -35,5 +35,5 @@ function renderToHTML(getMD) {
 
 function removeHoldState() {
     const holdStatusText = document.querySelector('#hold-status');
-    holdStatusText.textContent = '';
+    holdStatusText.textContent = null;
 }
