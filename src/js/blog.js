@@ -23,10 +23,11 @@ async function loadPost(postNum) { // posts are named in ascending numerical ord
 function renderToHTML(getMD) {
     const blogContainer = document.querySelector('.blog-container');
     const createArticle = document.createElement('article');
+    // const createArticle = blogContainer.parentNode.insertBefore(document.createElement('article'), blogContainer.nextSibling);
     const renderToHTML = marked.parse(getMD);
 
     createArticle.innerHTML = renderToHTML; // Security headers are active to prevent XSS
-    blogContainer.appendChild(createArticle);
+    blogContainer.insertBefore(createArticle, blogContainer.firstChild);
 
     if (postNum = 1) {
         removeHoldState()
