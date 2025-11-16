@@ -9,7 +9,7 @@ async function loadPost(postNum) { // posts are named in ascending numerical ord
         method: 'GET',
         mode: 'cors',
     });
-    if (!res.ok) {
+    if (!res.ok) { // Final blog post reached
         console.warn('No more posts avaliable!');
     }
     else {
