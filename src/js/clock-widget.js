@@ -21,7 +21,7 @@ function checkDST(getCurrentDate) {
             dstOffset = 0;
         }
         else if (
-            getCurrentDate.getDate() = 7 &&
+            getCurrentDate.getDate() == 7 &&
             getCurrentDate.getMonth() == 3 &&
             getCurrentDate.getDay() != 0
         ) {
