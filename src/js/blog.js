@@ -23,7 +23,6 @@ async function loadPost(postNum) { // posts are named in ascending numerical ord
 function renderToHTML(getMD) {
     const blogContainer = document.querySelector('.blog-container');
     const createArticle = document.createElement('article');
-    // const createArticle = blogContainer.parentNode.insertBefore(document.createElement('article'), blogContainer.nextSibling);
     const renderToHTML = marked.parse(getMD);
 
     createArticle.innerHTML = renderToHTML; // Security headers are active to prevent XSS
@@ -31,6 +30,19 @@ function renderToHTML(getMD) {
 
     if (postNum = 1) {
         removeHoldState()
+    }
+}
+
+let postsArray = [];
+class NewPost {
+    constructor(postTitle, postDate, postTags, postContent) {
+        this.postTitle = postTitle;
+        this.postDate = postDate;
+        this.postTags = postTags;
+        this.postContent = postContent;
+    }
+    method() {
+        postsArray.append(this.postTitle, this.postDate, this.postTags, this.postContent)
     }
 }
 
