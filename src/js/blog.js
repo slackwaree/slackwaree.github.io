@@ -1,5 +1,6 @@
 import { marked } from 'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js';
 
+let postsArray = [];
 let postNum = 1;
 window.addEventListener('load', loadPost(postNum++));
 
@@ -10,39 +11,29 @@ async function loadPost(postNum) { // posts are named in ascending numerical ord
         mode: 'cors',
     });
     if (!res.ok) { // Final blog post reached
+        postsArray.forEach((e) => {
+            renderToHTML(e);
+        });
         console.warn('No more posts avaliable!');
     }
     else {
         const getMD = await res.text();
-        renderToHTML(getMD);
+        postsArray.push(marked.parse(getMD));
         postNum++;
         loadPost(postNum);
     }
 }
 
-function renderToHTML(getMD) {
+function renderToHTML(e) {
     const blogContainer = document.querySelector('.blog-container');
     const createArticle = document.createElement('article');
-    const renderToHTML = marked.parse(getMD);
+    const renderToHTML = marked.parse(e);
 
     createArticle.innerHTML = renderToHTML; // Security headers are active to prevent XSS
     blogContainer.insertBefore(createArticle, blogContainer.firstChild);
 
     if (postNum = 1) {
         removeHoldState()
-    }
-}
-
-let postsArray = [];
-class NewPost {
-    constructor(postTitle, postDate, postTags, postContent) {
-        this.postTitle = postTitle;
-        this.postDate = postDate;
-        this.postTags = postTags;
-        this.postContent = postContent;
-    }
-    method() {
-        postsArray.append(this.postTitle, this.postDate, this.postTags, this.postContent)
     }
 }
 
