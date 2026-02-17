@@ -26,8 +26,8 @@ async function loadPost(postNum) { // posts are named in ascending numerical ord
 }
 
 const blogContainer = document.querySelector('.blog-container');
-const createArticle = document.createElement('article');
 function renderToHTML(e) {
+    const createArticle = document.createElement('article');
     const renderToHTML = marked.parse(e);
 
     createArticle.innerHTML = renderToHTML; // Security headers are active to prevent XSS
@@ -45,8 +45,9 @@ function removeHoldState() {
 
 function lastPostReached() {
     const postCount = localStorage.getItem('lastPost');
+    postsArray.push('green')
     if (postCount == null || postCount != postsArray.length) {
         localStorage.setItem('lastPost', postsArray.length);
-        blogContainer.classList.add('newPostAlert')
+        blogContainer.firstChild.classList.add('newPostAlert')
     }
 }
