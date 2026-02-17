@@ -44,12 +44,9 @@ function removeHoldState() {
 }
 
 function lastPostReached() {
-    const postCount = localStorage.getItem('lastPost')
-    // postsArray.push('test')
-    
+    const postCount = localStorage.getItem('lastPost');
     if (postCount == null || postCount != postsArray.length) {
-        console.log('Last post unread', localStorage.getItem('lastPost'), postsArray.length);
         localStorage.setItem('lastPost', postsArray.length);
-        blogContainer.classList.add('green')
+        blogContainer.classList.add('newPostAlert')
     }
 }
