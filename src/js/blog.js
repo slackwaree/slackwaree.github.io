@@ -14,6 +14,7 @@ async function loadPost(postNum) { // posts are named in ascending numerical ord
         postsArray.forEach((e) => {
             renderToHTML(e);
         });
+        lastPostReached();
         console.warn('No more posts avaliable!');
     }
     else {
@@ -24,9 +25,9 @@ async function loadPost(postNum) { // posts are named in ascending numerical ord
     }
 }
 
+const blogContainer = document.querySelector('.blog-container');
+const createArticle = document.createElement('article');
 function renderToHTML(e) {
-    const blogContainer = document.querySelector('.blog-container');
-    const createArticle = document.createElement('article');
     const renderToHTML = marked.parse(e);
 
     createArticle.innerHTML = renderToHTML; // Security headers are active to prevent XSS
@@ -40,4 +41,15 @@ function renderToHTML(e) {
 function removeHoldState() {
     const holdStatusText = document.querySelector('#hold-status');
     holdStatusText.textContent = null;
+}
+
+function lastPostReached() {
+    const postCount = localStorage.getItem('lastPost')
+    // postsArray.push('test')
+    
+    if (postCount == null || postCount != postsArray.length) {
+        console.log('Last post unread', localStorage.getItem('lastPost'), postsArray.length);
+        localStorage.setItem('lastPost', postsArray.length);
+        blogContainer.classList.add('green')
+    }
 }
