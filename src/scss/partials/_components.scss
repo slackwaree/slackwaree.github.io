@@ -67,6 +67,17 @@
 		border-radius: 12px;
 		line-height: 1.8rem;
 		margin-bottom: 2rem;
+		&.newPostAlert {
+			border: 4px solid white;
+			animation-name: colorChange;
+			animation-duration: 2s;
+			@keyframes colorChange {
+				50% {border-color: rgb(255, 117, 234);}
+				100% {border-color: white;}
+			}
+		}
+		
+
 		h3 {
 			font-size: 1.5rem;
 			margin-bottom: 0.5rem;
